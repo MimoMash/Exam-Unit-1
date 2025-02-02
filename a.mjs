@@ -38,6 +38,6 @@ function multiply(...numbers) {
 const tests = test("Multiply Function");
 
 tests.isEqual(multiply(2, 2), 4, "Product of 2 and 2 should be 4");
-
+tests.isEqual(multiply(2, 2, 2, 3), 24, "Product of 2, 2, 2, and 3 should be 24");
 
 //#endregion
