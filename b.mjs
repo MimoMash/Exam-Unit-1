@@ -20,7 +20,11 @@ import test from "./test.mjs";
 //#region function -----------------------------------------------------------------
 // Write your function her.
 
-
+function formatName(name) {
+    if(typeof name !== "string") {
+        return null;
+    }
+}
 
 //#endregion
 
@@ -30,7 +34,8 @@ import test from "./test.mjs";
 
 //#region Tests --------------------------------------------------------------------
 // Write your tests her.
+const tests = test("Format Name Function")
 
-
+tests.isEqual(formatName(2), null, "2 is not a string");
 
 //#endregion
