@@ -23,8 +23,10 @@ import test from "./test.mjs";
 function multiply(...numbers) {
 
     for (let arg of numbers) {
+        if (arg === Infinity || arg === -Infinity)
+            return arg;
         arg = parseInt(arg);
-       if (isNaN(arg) || typeof arg !== "number") {
+        if (isNaN(arg) || typeof arg !== "number") {
             return NaN;
         }
     }
@@ -57,5 +59,6 @@ tests.isNotANumber(multiply(NaN, 2), "Product of NaN and 2 should be NaN");
 tests.isNotANumber(multiply(undefined, 2, 3), "Product of undefined, 2 and 3 should be NaN");
 tests.isNotANumber(multiply(null, 5), "Product of null and 5 should be NaN");
 
-
+//Edge cases
+tests.isEqual(multiply(Infinity, 2), Infinity, "Product of -Infinity and 2 should be Infinity");
 //#endregion
