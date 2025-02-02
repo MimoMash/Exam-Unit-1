@@ -62,4 +62,5 @@ tests.isNotANumber(multiply(null, 5), "Product of null and 5 should be NaN");
 //Edge cases
 tests.isEqual(multiply(Infinity, 2), Infinity, "Product of Infinity and 2 should be Infinity");
 tests.isEqual(multiply(2, -Infinity), -Infinity, "Product of 2 and -Infinity should be -Infinity");
+tests.isEqual(multiply(2, 0), 0, "Product of 2 and 0 should be 0");
 //#endregion
