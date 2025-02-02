@@ -24,6 +24,8 @@ function formatName(name) {
     if(typeof name !== "string") {
         return null;
     }
+    name = name.trim();
+    
     return name;
 }
 
@@ -39,6 +41,7 @@ const tests = test("Format Name Function")
 
 tests.isEqual(formatName(2), null, "2 is not a string");
 tests.isEqual(formatName("Mohammad"), "Mohammad", "Format Name Ok");
+tests.isEqual(formatName("    Mohammad   "), "Mohammad", "Removed leading and trailing whitespace")
 
 
 //#endregion
