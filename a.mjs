@@ -21,7 +21,7 @@ import test from "./test.mjs";
 // Write your function her.
 
 function multiply(...numbers) {
-
+    
     if (isNaN(numbers) || typeof numbers !== "number") {
         return NaN;
     }
@@ -49,5 +49,6 @@ tests.isEqual(multiply(-1, 2, 3), -6, "Product of -1, 2 and 3 should be -6");
 tests.isEqual(multiply(2.5, 3.5), 8.75, "Product of 2,5 and 3,5 should be 8,75");
 
 // Invalid inputs
+tests.isNotANumber(multiply(NaN, 2), NaN, "Product of NaN and 2 should be NaN");
 
 //#endregion
