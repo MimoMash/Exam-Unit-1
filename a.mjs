@@ -20,17 +20,25 @@ import test from "./test.mjs";
 //#region function -----------------------------------------------------------------
 // Write your function her.
 
-
+function multiply(...numbers) {
+    let total = 1;
+    console.log(numbers);
+    for (const arg of numbers) {
+        total *= arg;
+    }
+    return total;
+}
 
 //#endregion
-
-
 
 
 
 //#region Tests --------------------------------------------------------------------
 // Write your tests her.
 
+const tests = test("Multiply Function");
+
+tests.isEqual(multiply(2, 2), 4, "Product of 2 and 2 should be 4");
 
 
 //#endregion
