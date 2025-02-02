@@ -14,6 +14,10 @@ function sequence(n) {
     if(Math.sign(n) == -1) {
         return null;
     }
+    
+    if(!Number.isInteger(n)) {
+        return null;
+    }
 
     if (n <= 0) return 0;
     if (n == 1) return 1;
