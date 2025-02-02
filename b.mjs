@@ -26,7 +26,7 @@ function formatName(name) {
     }
 
     name = name.trim();
-    
+
     if (name == "") {
         return "";
     }
@@ -52,7 +52,7 @@ tests.isEqual(formatName(2), null, "2 is not a string");
 tests.isEqual(formatName("Mohammad"), "Mohammad", "Format Name Ok");
 tests.isEqual(formatName("    Mohammad   "), "Mohammad", "Removed leading and trailing whitespace");
 tests.isEqual(formatName("mohammad ahmadi"), "Mohammad Ahmadi", "Capitalization works");
-tests.isEqual(formatName("  "), "", "Empty string")
-
+tests.isEqual(formatName("  "), "", "Empty string");
+tests.isEqual(formatName("mohammad#"), null, "Special character filter works");
 
 //#endregion
