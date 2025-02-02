@@ -31,7 +31,15 @@ function formatName(name) {
         return "";
     }
 
-    name = name.split(" ");
+    const norwegianAlphabet = "abcdefghijklmnopqrstuvwxyzæøåABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ ";
+    name = name.split("");
+    for (let i = 0; i < name.length; i++) {
+        if(!norwegianAlphabet.includes(name[i])) {
+            return null;
+        }
+    }
+    
+    name = name.join("").toLowerCase().split(" ");
     for (let i = 0; i < name.length; i++) {
         name[i] = name[i].replace(name[i][0], name[i][0].toUpperCase());
     }
