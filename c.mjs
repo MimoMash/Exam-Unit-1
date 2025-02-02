@@ -11,6 +11,10 @@ import test from "./test.mjs";
 */
 
 function sequence(n) {
+    if(Math.sign(n) == -1) {
+        return null;
+    }
+
     if (n <= 0) return 0;
     if (n == 1) return 1;
 
