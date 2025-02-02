@@ -26,6 +26,11 @@ function formatName(name) {
     }
 
     name = name.trim();
+    
+    if (name == "") {
+        return "";
+    }
+
     name = name.split(" ");
     for (let i = 0; i < name.length; i++) {
         name[i] = name[i].replace(name[i][0], name[i][0].toUpperCase());
@@ -47,6 +52,7 @@ tests.isEqual(formatName(2), null, "2 is not a string");
 tests.isEqual(formatName("Mohammad"), "Mohammad", "Format Name Ok");
 tests.isEqual(formatName("    Mohammad   "), "Mohammad", "Removed leading and trailing whitespace");
 tests.isEqual(formatName("mohammad ahmadi"), "Mohammad Ahmadi", "Capitalization works");
+tests.isEqual(formatName("  "), "", "Empty string")
 
 
 //#endregion
