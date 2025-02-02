@@ -45,8 +45,9 @@ tests.isEqual(guessNumber(10, 15), "Too high", "If target is 10 and guess is 15,
 tests.isEqual(guessNumber(10, 10), "Correct!", "If target is 10 and guess is 10, return 'Correct!'");
 
 // Invalid inputs
-tests.isEqual(guessNumber(10, "11"), null, "Guess is not an integer");
 
+tests.isEqual(guessNumber(10, "11"), null, "Guess is not an integer");
+tests.isEqual(guessNumber("10", 5), null, "Target is not an integer");
 // Edge cases
 
 
