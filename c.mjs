@@ -11,14 +11,20 @@ import test from "./test.mjs";
 */
 
 function sequence(n) {
-    let sum = 0;
-    if (n <= 1) {
-        return n;
+    if (n <= 0) return 0;
+    if (n == 1) return 1;
+
+    let a = 0
+    let b = 1
+    let sum;
+
+    for (let i = 2; i <= n; i++) {
+        sum = a + b;
+        a = b;
+        b = sum;
     }
 
-    sum = (n - 1) + (n - 2);
-    
-    return sum;
+    return b;
 }
 
 //#region Tests --------------------------------------------------------------------
