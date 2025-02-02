@@ -38,7 +38,7 @@ function formatName(name) {
 const tests = test("Format Name Function")
 
 tests.isEqual(formatName(2), null, "2 is not a string");
-tests.isEqual(formatName("Mohammad"), "Mohammad", "Format Name Ok")
+tests.isEqual(formatName("Mohammad"), "Mohammad", "Format Name Ok");
 
 
 //#endregion
