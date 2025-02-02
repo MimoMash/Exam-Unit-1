@@ -21,13 +21,16 @@ import test from "./test.mjs";
 // Write your function her.
 
 function formatName(name) {
-    if(typeof name !== "string") {
+    if (typeof name !== "string") {
         return null;
     }
 
     name = name.trim();
-    
-    return name;
+    name = name.split(" ");
+    for (let i = 0; i < name.length; i++) {
+        name[i] = name[i].replace(name[i][0], name[i][0].toUpperCase());
+    }
+      return name.join(" ");
 }
 
 //#endregion
