@@ -23,6 +23,7 @@ import test from "./test.mjs";
 function multiply(...numbers) {
 
     for (let arg of numbers) {
+        arg = parseInt(arg);
        if (isNaN(arg) || typeof arg !== "number") {
             return NaN;
         }
