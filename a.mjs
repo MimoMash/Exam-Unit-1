@@ -22,7 +22,6 @@ import test from "./test.mjs";
 
 function multiply(...numbers) {
     let total = 1;
-    console.log(numbers);
     for (const arg of numbers) {
         total *= arg;
     }
